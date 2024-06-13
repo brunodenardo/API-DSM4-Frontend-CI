@@ -1,4 +1,4 @@
-# Etapa 1: Construir o projeto
+
 # Use uma imagem oficial do Node.js como imagem base
 FROM node:18-alpine AS builder
 
