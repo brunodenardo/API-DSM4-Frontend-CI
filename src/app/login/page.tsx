@@ -8,7 +8,7 @@ import { Button } from "@components/Button";
 import Input from "@components/Input";
 import { loginUsuarioSchema } from "@lib/validations/usuario/loginUsuarioSchema";
 import { UsuarioLoginSchema } from "@lib/models/Usuario";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { AuthContext } from "@contexts/AuthContext";
 import { ToastContext } from "@contexts/ToastContext";
 
@@ -30,6 +30,8 @@ export default function Login() {
             addToast({ visible: true, message: `Erro no login: ${error.response.data}`, type: 'error', position: 'bottom-left' });
         }
     }
+
+    useEffect(()=>{console.log(process.env.NEXT_PUBLIC_BACK_HOST)},[])
 
     return (
         <>
